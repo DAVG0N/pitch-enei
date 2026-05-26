@@ -518,94 +518,135 @@
 
   <!-- Slide 5: Infraestruturas -->
   <Slide title="Infraestruturas" index={5} {currentSlide} customClass="slide-infra" id="slide6">
-    <h2 class="slide-title">Infraestruturas</h2>
-    <p class="infra-subtitle">Planos e alternativas para sediar o ENEI 2027</p>
+    <h2 class="slide-title">Infraestruturas <span class="accent">de Faro</span></h2>
+    <p class="infra-subtitle">Planos estratégicos e alternativas de alojamento e sede para o ENEI 2027</p>
     <div class="content-area">
       <div class="infra-plans">
         <!-- Plano 1 -->
         <div class="plan-card plan-primary">
           <div class="plan-header">
-            <span class="plan-number">1</span>
-            <h3>Plano Principal</h3>
+            <span class="plan-number">01</span>
+            <div class="plan-title-block">
+              <span class="plan-badge">PRIMARY_PLAN</span>
+              <h3>Plano Principal</h3>
+            </div>
           </div>
           <div class="plan-content">
             <div class="plan-section">
-              <i class="fa-solid fa-building accent"></i>
+              <i class="fa-solid fa-building"></i>
               <div>
                 <strong>Sede do Evento</strong>
                 <p>Conservatório Regional de Faro</p>
               </div>
             </div>
             <div class="plan-section">
-              <i class="fa-solid fa-bed accent"></i>
+              <i class="fa-solid fa-bed"></i>
               <div>
                 <strong>Alojamento</strong>
                 <p>Liceu de Faro</p>
               </div>
             </div>
-            <img src="/assets/images/conservatorio-algarve.jpg" alt="Conservatório Regional de Faro">
-            <img src="/assets/images/liceu-faro-aerea.jpg" alt="Vista aérea do Liceu de Faro">
+            <div class="plan-images-row">
+              <div class="plan-image-wrapper">
+                <img src="/assets/images/conservatorio-algarve.jpg" alt="Conservatório Regional de Faro">
+                <span class="image-label">Sede</span>
+              </div>
+              <div class="plan-image-wrapper">
+                <img src="/assets/images/liceu-faro-aerea.jpg" alt="Vista aérea do Liceu de Faro">
+                <span class="image-label">Alojamento</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Plano 2 -->
         <div class="plan-card plan-secondary">
           <div class="plan-header">
-            <span class="plan-number">2</span>
-            <h3>Backup Plan A</h3>
+            <span class="plan-number">02</span>
+            <div class="plan-title-block">
+              <span class="plan-badge">BACKUP_A</span>
+              <h3>Backup Plan A</h3>
+            </div>
           </div>
           <div class="plan-content">
             <div class="plan-section">
-              <i class="fa-solid fa-building accent"></i>
+              <i class="fa-solid fa-building"></i>
               <div>
                 <strong>Sede do Evento</strong>
                 <p>IPDJ Faro</p>
               </div>
             </div>
             <div class="plan-section">
-              <i class="fa-solid fa-bed accent"></i>
+              <i class="fa-solid fa-bed"></i>
               <div>
                 <strong>Alojamento</strong>
                 <p>Tomás Cabreira</p>
               </div>
             </div>
-            <img src="/assets/images/faro-277.jpg" alt="Vista aérea de Faro">
-            <img src="/assets/images/escola-nautical.jpg" alt="Escola Tomás Cabreira">
+            <div class="plan-images-row">
+              <div class="plan-image-wrapper">
+                <img src="/assets/images/faro-277.jpg" alt="Vista aérea de Faro">
+                <span class="image-label">Sede</span>
+              </div>
+              <div class="plan-image-wrapper">
+                <img src="/assets/images/escola-nautical.jpg" alt="Escola Tomás Cabreira">
+                <span class="image-label">Alojamento</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Plano 3 -->
         <div class="plan-card plan-tertiary">
           <div class="plan-header">
-            <span class="plan-number">3</span>
-            <h3>Backup Plan B</h3>
+            <span class="plan-number">03</span>
+            <div class="plan-title-block">
+              <span class="plan-badge">BACKUP_B</span>
+              <h3>Backup Plan B</h3>
+            </div>
           </div>
           <div class="plan-content">
             <div class="plan-section">
-              <i class="fa-solid fa-building accent"></i>
+              <i class="fa-solid fa-building"></i>
               <div>
                 <strong>Sede do Evento</strong>
                 <p>Universidade da Penha</p>
               </div>
             </div>
             <div class="plan-section">
-              <i class="fa-solid fa-bed accent"></i>
+              <i class="fa-solid fa-bed"></i>
               <div>
                 <strong>Alojamento</strong>
                 <p>Pavilhão Municipal da Penha</p>
               </div>
             </div>
-            <img src="/assets/images/ualg-1110.jpg" alt="Campus da Penha da UAlg">
-            <img src="/assets/images/pavilhao-penha.jpg" alt="Pavilhão Municipal da Penha">
+            <div class="plan-images-row">
+              <div class="plan-image-wrapper">
+                <img src="/assets/images/ualg-1110.jpg" alt="Campus da Penha da UAlg">
+                <span class="image-label">Sede</span>
+              </div>
+              <div class="plan-image-wrapper">
+                <img src="/assets/images/pavilhao-penha.jpg" alt="Pavilhão Municipal da Penha">
+                <span class="image-label">Alojamento</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Sessão de Abertura Opcional -->
       <div class="opening-optional">
-        <i class="fa-solid fa-star accent"></i>
-        <span><strong>Sessão de Abertura (Opcional):</strong> Teatro das Figuras</span>
-        <img src="/assets/images/teatro-municipal.jpg" alt="Teatro das Figuras">
+        <div class="opening-text">
+          <span class="opening-tag">&lt;HIGHLIGHT_VENUE /&gt;</span>
+          <div class="opening-title-container">
+            <i class="fa-solid fa-star accent"></i>
+            <h3>Sessão de Abertura (Opcional)</h3>
+          </div>
+          <p><strong>Teatro das Figuras:</strong> Espaço cultural de referência regional com acústica e estrutura de excelência para a conferência inaugural do ENEI 2027.</p>
+        </div>
+        <div class="opening-image-wrapper">
+          <img src="/assets/images/teatro-municipal.jpg" alt="Teatro das Figuras">
+        </div>
       </div>
     </div>
   </Slide>
@@ -660,7 +701,7 @@
               <td>Todos os participantes</td>
             </tr>
             <tr>
-              <td><span class="accent">Atividades de Entrusamento</span></td>
+              <td><span class="accent">Atividades de Entrosamento</span></td>
               <td>Atividades de team building e interação entre os participantes.</td>
               <td>Estudantes</td>
             </tr>
