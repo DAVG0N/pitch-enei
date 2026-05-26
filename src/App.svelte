@@ -144,8 +144,15 @@
     presidente: "David Gonçalves",
     vicePresidente: "Diogo Almeida",
     tesoureiro: "David Rodrigues",
-    secretarios: ["David Silvestre", "Afonso Bitoque (Adjunto)"],
-    coordenadores: ["Afonso", "Raquel", "Rian"]
+    secretarios: [
+      "David Silvestre", 
+      "Afonso Bitoque"
+    ],
+    coordenadores: [
+      "Afonso", 
+      "Raquel", 
+      "Rian"
+    ]
   };
 
   // Dados dos Departamentos (Expansíveis e customizáveis)
@@ -155,40 +162,69 @@
       nome: "Departamento de Logística",
       descCurta: "Espaços, alojamento e transportes.",
       icon: "fa-truck-ramp-box",
-      diretor: "Coordenador de Logística",
-      membros: ["Membro 1", "Membro 2", "Membro 3", "Membro 4"]
+      diretor: "Barbara Pereira",
+      membros: [
+        "Beatriz Mateia; LEI", 
+        "Guilherme Bacoco; LEI", 
+        "Francisco Afonso; LEI", 
+        "Lara; LESTI",
+        "Ricardo Vicente; MEI"
+      ]
     },
     {
       id: "marketing",
       nome: "Departamento de Marketing",
       descCurta: "Branding, redes e comunicação.",
       icon: "fa-bullhorn",
-      diretor: "Coordenador de Marketing",
-      membros: ["Membro 1", "Membro 2", "Membro 3"]
+      diretor: "Raquel",
+      membros: [
+        "Jorge; CC", 
+        "Inês Campelo; Mkt"
+      ]
     },
     {
       id: "comercial",
       nome: "Departamento Comercial",
       descCurta: "Sponsors, parcerias e orçamentos.",
       icon: "fa-wallet",
-      diretor: "Coordenador Comercial",
-      membros: ["Membro 1", "Membro 2"]
+      diretor: "Mohammed Rohaim",
+      membros: [
+        "Duarte Cunha; LEI", 
+        "José Tico; LEI",
+        "Matilde; BioEng",
+        "Tarsila; BioEng",
+        "Marcio Andrade; LEI"
+      ]
     },
     {
       id: "atividades",
       nome: "Departamento de Atividades",
       descCurta: "Social, networking e momentos de lazer.",
       icon: "fa-champagne-glasses",
-      diretor: "Coordenador de Atividades",
-      membros: ["Membro 1", "Membro 2", "Membro 3", "Membro 4"]
+      diretor: "Leonardo Cantachini",
+      membros: [
+        "Pedro Salgueiro; LEI", 
+        "Gonçalo Santinho; LEI", 
+        "Rodrigo Linhas; LEI", 
+        "Afonso Francisco; LEI",
+        "Simão Reis; LEI",
+        "Rodrigo Silva; LEI",
+        "Matheus Teixeira; LEI"
+      ]
     },
     {
       id: "tecnologia",
       nome: "Departamento de Tecnologia",
       descCurta: "Website, inscrições e infraestrutura digital.",
       icon: "fa-laptop-code",
-      diretor: "Coordenador de Tecnologia",
-      membros: ["Membro 1", "Membro 2", "Membro 3"]
+      diretor: "Francisco Melo",
+      membros: [
+        "Miguel Alito; LEI", 
+        "Martim Neves; LEI", 
+        "Guilherme; LEI",
+        "Kakali; LEI",
+        "Gabriel Vaz; LEI"
+      ]
     }
   ];
 
@@ -430,7 +466,7 @@
   <!-- Slide 4: Organização e Comissão -->
   <Slide title="Organização e Comissão" index={4} {currentSlide} id="slide-organizacao-comissao">
     <h2 class="slide-title">Organização & <span class="accent">Comissão</span></h2>
-    <p class="comissao-subtitle" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-faint); margin-top: -30px; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1.5px; padding-left: 24px; text-align: left; width: 100%;">Liderado por David Gonçalves em parceria com o NEI, NEEEC, ESTI e NEBio</p>
+    <p class="comissao-subtitle" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-faint); margin-top: -30px; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1.5px; padding-left: 24px; text-align: left; width: 100%;">Liderado por David Gonçalves em parceria com o NEEI, NEEC, LESTI, BioEng, MKT e CC</p>
     
     <div class="content-area">
       <!-- Row Superior (2 colunas: 40% Info, 60% Mesa) -->
@@ -903,8 +939,14 @@
             <div class="tree-section-title">EQUIPA DE MEMBROS</div>
             <div class="dept-members-grid">
               {#each dept.membros as membro}
+                {@const parts = membro.split(';')}
                 <div class="tree-node child-node">
-                  <div class="node-name">{membro}</div>
+                  <div class="node-name">
+                    {parts[0].trim()}
+                    {#if parts[1]}
+                      <span class="member-course">({parts[1].trim()})</span>
+                    {/if}
+                  </div>
                 </div>
               {:else}
                 <p class="no-members">Nenhum membro adicionado a esta equipa.</p>
