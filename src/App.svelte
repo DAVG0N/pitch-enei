@@ -88,7 +88,7 @@
         { texto: "Tudo do Passe Geral", incluido: true },
         { texto: "Almoço & Jantar", incluido: true },
         { texto: "Coffee Break", incluido: true },
-        { texto: "Pequeno Almoço", incluido: false },
+        { texto: "Sem Pequeno Almoço", incluido: false },
         { texto: "Sem estadia", incluido: false }
       ]
     },
@@ -122,7 +122,7 @@
         { texto: "Tudo do Passe Geral", incluido: true },
         { texto: "Almoço & Jantar", incluido: true },
         { texto: "Coffee Break", incluido: true },
-        { texto: "Pequeno Almoço", incluido: false },
+        { texto: "Sem Pequeno Almoço", incluido: false },
         { texto: "Sem estadia", incluido: false }
       ]
     },
@@ -627,7 +627,7 @@
             <tr>
               <td><span class="accent">Feira de Empresas</span></td>
               <td>Feira de emprego com foco em recrutamento direto e contacto com empresas.</td>
-              <td>Empresas & Estudantes</td>
+              <td>Empresas & Todos os participantes</td>
             </tr>
             <tr>
               <td><span class="accent">Workshops</span></td>
@@ -657,6 +657,11 @@
             <tr>
               <td><span class="accent">CTF's</span></td>
               <td>Competições de Capture The Flag ao longo dos dias com prémios.</td>
+              <td>Todos os participantes</td>
+            </tr>
+            <tr>
+              <td><span class="accent">Atividades de Entrusamento</span></td>
+              <td>Atividades de team building e interação entre os participantes.</td>
               <td>Estudantes</td>
             </tr>
           </tbody>
@@ -675,96 +680,191 @@
           <thead>
             <tr>
               <th class="col-hora">Hora</th>
-              <th class="col-dia">Quinta (Dia 1)</th>
-              <th class="col-dia">Sexta (Dia 2)</th>
-              <th class="col-dia">Sábado (Dia 3)</th>
-              <th class="col-dia">Domingo (Dia 4)</th>
+              <th class="col-dia">Quinta (1 Abril)</th>
+              <th class="col-dia">Sexta (2 Abril)</th>
+              <th class="col-dia">Sábado (3 Abril)</th>
+              <th class="col-dia">Domingo (4 Abril)</th>
             </tr>
           </thead>
           <tbody>
+            <!-- Row 1: 10:00 -->
             <tr>
               <td class="hora-label">10:00</td>
-              <td class="vazio">-</td>
-              <td class="celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshops</td>
-              <td class="celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshops</td>
-              <td class="celula-especial" rowspan="2"><i class="fa-solid fa-sun"></i> Relaxamento<br>Praia</td>
+              <td class="vazio" rowspan="4"></td>
+              
+              <!-- Sexta 10:00 -->
+              <td class="celula-mista" rowspan="2">
+                <div class="misto-wrapper">
+                  <div class="palestras-stack">
+                    <div class="inner-cell celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</div>
+                    <div class="inner-cell celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</div>
+                  </div>
+                  <div class="workshops-grid">
+                    <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #1</div>
+                    <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #2</div>
+                    <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #3</div>
+                  </div>
+                </div>
+              </td>
+
+              <!-- Sábado 10:00 -->
+              <td class="celula-mista" rowspan="2">
+                <div class="misto-wrapper">
+                  <div class="palestras-stack">
+                    <div class="inner-cell celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</div>
+                    <div class="inner-cell celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</div>
+                  </div>
+                  <div class="workshops-grid">
+                    <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #10</div>
+                    <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #11</div>
+                    <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #12</div>
+                  </div>
+                </div>
+              </td>
+
+              <!-- Domingo 10:00 -->
+              <td class="celula-especial-laranja" rowspan="2">
+                <i class="fa-solid fa-sun"></i> Nascer do Sol na Praia
+              </td>
             </tr>
+
+            <!-- Row 2: 11:00 -->
             <tr>
               <td class="hora-label">11:00</td>
-              <td class="vazio">-</td>
-              <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
-              <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+              <!-- Outras colunas cobertas por rowspan -->
             </tr>
+
+            <!-- Row 3: 12:00 -->
             <tr>
               <td class="hora-label">12:00</td>
-              <td class="vazio">-</td>
-              <td class="celula-refeicao" colspan="2"><i class="fa-solid fa-utensils"></i> Almoço</td>
+              <td class="celula-refeicao"><i class="fa-solid fa-utensils"></i> Almoço</td>
+              <td class="celula-refeicao"><i class="fa-solid fa-utensils"></i> Almoço</td>
               <td class="celula-refeicao"><i class="fa-solid fa-utensils"></i> Almoço</td>
             </tr>
-            <tr>
-              <td class="hora-label">13:00</td>
-              <td class="vazio">-</td>
-              <td class="celula-refeicao" colspan="2"><i class="fa-solid fa-utensils"></i> Almoço</td>
-              <td class="celula-refeicao"><i class="fa-solid fa-utensils"></i> Almoço</td>
-            </tr>
+
+            <!-- Row 4: 14:00 -->
             <tr>
               <td class="hora-label">14:00</td>
-              <td class="vazio">-</td>
-              <td class="celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshops</td>
-              <td class="celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshops</td>
-              <td class="celula-tertulia" rowspan="2"><i class="fa-solid fa-comments"></i> Última<br>Tertúlia</td>
+              
+              <!-- Sexta 14:00 -->
+              <td class="celula-mista-longa" rowspan="4">
+                <div class="misto-wrapper-longo">
+                  <div class="palestras-stack-longo">
+                    <div class="inner-cell celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</div>
+                    <div class="inner-cell celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</div>
+                    <div class="inner-cell celula-vazia"></div>
+                    <div class="inner-cell celula-coffee"><i class="fa-solid fa-mug-hot"></i> Coffee Break</div>
+                  </div>
+                  <div class="workshops-stack-longo">
+                    <div class="workshops-grid">
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #4</div>
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #5</div>
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #6</div>
+                    </div>
+                    <div class="workshops-grid">
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #7</div>
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #8</div>
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #9</div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <!-- Sábado 14:00 -->
+              <td class="celula-mista-longa" rowspan="4">
+                <div class="misto-wrapper-longo">
+                  <div class="palestras-stack-longo">
+                    <div class="inner-cell celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</div>
+                    <div class="inner-cell celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</div>
+                    <div class="inner-cell celula-vazia"></div>
+                    <div class="inner-cell celula-coffee"><i class="fa-solid fa-mug-hot"></i> Coffee Break</div>
+                  </div>
+                  <div class="workshops-stack-longo">
+                    <div class="workshops-grid">
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #13</div>
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #14</div>
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #15</div>
+                    </div>
+                    <div class="workshops-grid">
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #16</div>
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #17</div>
+                      <div class="inner-cell celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshop #18</div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <!-- Domingo 14:00 -->
+              <td class="celula-tertulia" rowspan="2">
+                <i class="fa-solid fa-comments"></i> Tertúlia
+              </td>
             </tr>
+
+            <!-- Row 5: 15:00 -->
             <tr>
               <td class="hora-label">15:00</td>
-              <td class="celula-checkin" rowspan="3"><i class="fa-solid fa-id-card"></i> Check-ins</td>
-              <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
-              <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+              <td class="celula-checkin" rowspan="4">
+                <i class="fa-solid fa-id-card"></i> Check-Ins
+              </td>
+              <!-- Outras colunas cobertas por rowspan -->
             </tr>
+
+            <!-- Row 6: 16:00 -->
             <tr>
               <td class="hora-label">16:00</td>
-              <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
-              <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
-              <td class="celula-encerramento" rowspan="2"><i class="fa-solid fa-trophy"></i> Encerramento<br>& Prémios</td>
+              <!-- Domingo 16:00 -->
+              <td class="celula-encerramento" rowspan="2">
+                <i class="fa-solid fa-trophy"></i> Sessão de Encerramento
+              </td>
+              <!-- Outras colunas cobertas por rowspan -->
             </tr>
+
+            <!-- Row 7: 16:30 -->
             <tr>
               <td class="hora-label">16:30</td>
-              <td class="celula-coffee" colspan="2"><i class="fa-solid fa-mug-hot"></i> Coffee Break</td>
+              <!-- Outras colunas cobertas por rowspan -->
             </tr>
+
+            <!-- Row 8: 17:00 -->
             <tr>
               <td class="hora-label">17:00</td>
-              <td class="vazio">-</td>
+              <!-- Quinta está coberta por rowspan do Check-In -->
               <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
               <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
-              <td class="vazio">-</td>
+              <td class="vazio" rowspan="4"></td>
             </tr>
+
+            <!-- Row 9: 18:00 -->
             <tr>
               <td class="hora-label">18:00</td>
-              <td class="celula-especial" rowspan="2"><i class="fa-solid fa-handshake"></i> Boas-vindas</td>
-              <td class="celula-tertulia" rowspan="2"><i class="fa-solid fa-comments"></i> Tertúlia</td>
-              <td class="celula-tertulia" rowspan="2"><i class="fa-solid fa-comments"></i> Tertúlia</td>
-              <td class="vazio">-</td>
+              <td class="celula-boas-vindas"><i class="fa-solid fa-door-open"></i> Sessão de Boas Vindas</td>
+              <td class="celula-tertulia"><i class="fa-solid fa-comments"></i> Tertulia</td>
+              <td class="celula-tertulia"><i class="fa-solid fa-comments"></i> Tertulia</td>
             </tr>
-            <tr>
-              <td class="hora-label">19:00</td>
-              <td class="vazio">-</td>
-            </tr>
+
+            <!-- Row 10: 20:00 -->
             <tr>
               <td class="hora-label">20:00</td>
-              <td class="celula-especial" rowspan="2"><i class="fa-solid fa-utensils"></i> Arraial +<br>Jantar</td>
-              <td class="celula-refeicao" rowspan="2"><i class="fa-solid fa-utensils"></i> Jantar</td>
-              <td class="celula-refeicao" rowspan="2"><i class="fa-solid fa-utensils"></i> Jantar</td>
-              <td class="vazio">-</td>
+              <td class="celula-arraial" rowspan="2">
+                <i class="fa-solid fa-guitar"></i> Jantar/Arraial Académico
+              </td>
+              <td class="celula-refeicao"><i class="fa-solid fa-utensils"></i> Jantar</td>
+              <td class="celula-refeicao"><i class="fa-solid fa-utensils"></i> Jantar</td>
             </tr>
+
+            <!-- Row 11: 22:00 -->
             <tr>
-              <td class="hora-label">21:00</td>
-              <td class="vazio">-</td>
+              <td class="hora-label">22:00</td>
+              <td class="celula-atividades-noturnas"><i class="fa-solid fa-moon"></i> Atividades Noturnas</td>
+              <td class="celula-atividades-noturnas"><i class="fa-solid fa-moon"></i> Atividades Noturnas</td>
             </tr>
           </tbody>
         </table>
         <div class="legenda-calendario">
-          <span class="legenda-item"><i class="fa-solid fa-briefcase"></i> Feira Empresas (Todo o dia)</span>
-          <span class="legenda-item"><i class="fa-solid fa-laptop-code"></i> Workshops (10-12h, 14-16h)</span>
-          <span class="legenda-item"><i class="fa-solid fa-microphone"></i> Palestras (Hora em hora)</span>
+          <span class="legenda-item"><i class="fa-solid fa-laptop-code"></i> Workshops (Espaço Secundário)</span>
+          <span class="legenda-item"><i class="fa-solid fa-microphone"></i> Palestras (Auditório Principal)</span>
+          <span class="legenda-item"><i class="fa-solid fa-utensils"></i> Refeições (Almoço & Jantar)</span>
+          <span class="legenda-item"><i class="fa-solid fa-mug-hot"></i> Coffee Break (Networking)</span>
         </div>
       </div>
     </div>

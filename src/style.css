@@ -652,46 +652,56 @@ th {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .tabela-horarios {
     border-collapse: collapse;
     font-size: 11px;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1220px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--surface-white-08);
 }
 
 .tabela-horarios th,
 .tabela-horarios td {
-    border: 1px solid var(--surface-white-10);
-    padding: 6px 8px;
+    border: 1px solid var(--surface-white-08);
+    padding: 8px 10px;
     text-align: center;
     vertical-align: middle;
 }
 
 .tabela-horarios thead th {
-    background: var(--primary-15);
-    color: var(--text-white);
+    background: var(--surface-white-03);
+    color: var(--color-primary);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     font-size: 12px;
+    border-bottom: 2px solid var(--primary-30);
+    padding: 14px 10px;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .col-hora {
-    width: 60px;
-    background: var(--surface-white-03);
+    width: 80px;
+    background: var(--surface-white-02);
 }
 
 .col-dia {
-    width: 22%;
+    width: 23%;
 }
 
 .hora-label {
-    background: var(--surface-white-03);
+    background: var(--surface-white-02);
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    color: var(--text-dim);
+    font-weight: 600;
+    color: var(--text-white);
+    border-right: 2px solid var(--primary-20) !important;
 }
 
 .tabela-horarios td i {
@@ -703,46 +713,165 @@ th {
 .celula-workshop {
     background: var(--primary-12);
     color: var(--color-primary);
+    border: 1px solid var(--primary-15);
 }
 
 .celula-palestra {
-    background: var(--success-12);
-    color: var(--color-success);
+    background: var(--danger-12); /* Palestra em tom coral/avermelhado como na imagem */
+    color: var(--color-danger);
+    border: 1px solid rgba(255, 85, 85, 0.15);
 }
 
 .celula-tertulia {
     background: var(--warning-12);
     color: var(--color-warning);
+    border: 1px solid rgba(255, 153, 0, 0.15);
 }
 
 .celula-refeicao {
-    background: var(--danger-12);
-    color: var(--color-danger-soft);
+    background: var(--success-12); /* Almoço/Jantar em verde como na imagem */
+    color: var(--color-success);
+    border: 1px solid rgba(0, 204, 153, 0.15);
 }
 
 .celula-coffee {
     background: var(--warm-12);
     color: var(--color-accent-warm);
+    border: 1px solid rgba(255, 122, 0, 0.15);
 }
 
-.celula-especial {
-    background: var(--highlight-12);
-    color: var(--color-highlight);
+.celula-especial-laranja {
+    background: var(--warning-15);
+    color: var(--color-warning);
+    border: 1px solid rgba(255, 153, 0, 0.25);
+}
+
+.celula-boas-vindas {
+    background: var(--primary-15);
+    color: var(--color-primary);
+    border: 1px solid var(--primary-20);
+}
+
+.celula-arraial {
+    background: var(--warm-12);
+    color: var(--color-accent-warm);
+    border: 1px solid rgba(255, 122, 0, 0.2);
+}
+
+.celula-atividades-noturnas {
+    background: var(--danger-15);
+    color: var(--color-danger);
+    border: 1px solid rgba(255, 85, 85, 0.25);
 }
 
 .celula-checkin {
-    background: var(--primary-15);
-    color: var(--color-primary);
+    background: var(--highlight-12); /* Check-ins em roxo como na imagem */
+    color: var(--color-highlight);
+    border: 1px solid rgba(153, 0, 255, 0.15);
 }
 
 .celula-encerramento {
-    background: var(--danger-15);
-    color: var(--color-danger);
+    background: var(--highlight-15); /* Encerramento em roxo como na imagem */
+    color: var(--color-highlight);
+    border: 1px solid rgba(153, 0, 255, 0.25);
 }
 
 .vazio {
-    background: var(--surface-white-01);
+    background: rgba(255, 255, 255, 0.01);
     color: var(--text-very-faint);
+}
+
+/* Suporte para layout de múltiplos blocos e colunas internas (Workshops + Palestras) */
+.celula-mista,
+.celula-mista-longa {
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.misto-wrapper {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-height: 95px; /* Altura ideal alinhada */
+}
+
+.misto-wrapper-longo {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-height: 190px; /* Altura ideal alinhada para rowspan=4 */
+}
+
+.palestras-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1.1;
+    height: 100%;
+}
+
+.palestras-stack-longo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1.1;
+    height: 100%;
+}
+
+.workshops-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    flex: 2.2;
+    height: 100%;
+}
+
+.workshops-stack-longo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 2.2;
+    height: 100%;
+}
+
+.workshops-stack-longo .workshops-grid {
+    height: calc(50% - 2px);
+    width: 100%;
+}
+
+.inner-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 6px 4px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.inner-cell i {
+    margin-bottom: 4px;
+    margin-right: 0 !important;
+    font-size: 11px;
+}
+
+.celula-vazia {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px dashed var(--surface-white-05);
+    border-radius: 4px;
 }
 
 .legenda-calendario {
