@@ -987,11 +987,7 @@
         </div>
         <div class="contact-item">
           <i class="fa-solid fa-building-columns"></i>
-          <span>neei@aaualg.pt <em>(Provisório)</em></span>
-        </div>
-        <div class="contact-item previsto">
-          <i class="fa-solid fa-clock"></i>
-          <span>coenei@aaualg.pt <em>(Previsto - não ativo)</em></span>
+          <span>coenei@aaualg.pt</span>
         </div>
       </div>
     </div>
