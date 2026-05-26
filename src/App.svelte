@@ -70,7 +70,7 @@
   const tickets = [
     {
       preco: "15€",
-      nome: "Passe Geral (Alumni)",
+      nome: "Passe Geral (Estudantes)",
       cardType: "basico",
       beneficios: [
         { texto: "Acesso a 4 dias de evento", incluido: true },
@@ -82,7 +82,7 @@
     },
     {
       preco: "25€",
-      nome: "Passe c/Alimentação (Alumni)",
+      nome: "Passe c/Alimentação (Estudantes)",
       cardType: "alimentacao",
       beneficios: [
         { texto: "Tudo do Passe Geral", incluido: true },
@@ -94,7 +94,7 @@
     },
     {
       preco: "35€",
-      nome: "Passe Completo (Alumni)",
+      nome: "Passe Completo (Estudantes)",
       cardType: "completo",
       beneficios: [
         { texto: "Tudo do Passe c/Alimentação", incluido: true },
@@ -104,7 +104,7 @@
     },
     {
       preco: "50€",
-      nome: "Passe Geral (N/Alumni)",
+      nome: "Passe Geral (N/Estudantes)",
       cardType: "externo",
       beneficios: [
         { texto: "Acesso a 4 dias de evento", incluido: true },
@@ -116,7 +116,7 @@
     },
     {
       preco: "65€",
-      nome: "Passe c/Alimentação (N/Alumni)",
+      nome: "Passe c/Alimentação (N/Estudantes)",
       cardType: "externo-premium",
       beneficios: [
         { texto: "Tudo do Passe Geral", incluido: true },
