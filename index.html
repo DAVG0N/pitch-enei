@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENEI Faro 2027 - Pitch de Candidatura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+<div class="slide-counter"><span id="current-slide">01</span>/13</div>
+<button class="fullscreen-btn" id="fullscreen-btn" title="Fullscreen"><i class="fa-solid fa-expand"></i></button>
+
+<div class="slides-wrapper">
+    <div class="slide active" data-title="Capa" data-index="0">
+        <div class="slide-container" id="slide1">
+            <div class="title-layout">
+                <p class="subtitle">&lt;LOCAL_HOST: FARO_2027 /&gt;</p>
+                <h1>ENEI 2027<br><span class="accent">Faro no Epicentro</span></h1>
+                <p>Proposta Estratégica de Candidatura para o Maior Evento Nacional <br>de Estudantes de Engenharia Informática.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="O Que é o ENEI?" data-index="1">
+        <div class="slide-container slide-what-is" id="slide2">
+            <div class="title-layout">
+                <h2>O Que é o <span class="accent">ENEI</span>?</h2>
+                <p>Fundado para unir a academia e a indústria, o Encontro Nacional de Estudantes de Informática é o fórum de referência para os futuros líderes tecnológicos de Portugal.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Magnitude e Impacto" data-index="2">
+        <div class="slide-container" id="slide3">
+            <h2 class="slide-title">Magnitude e Impacto</h2>
+            <div class="content-area">
+                <div class="two-column">
+                    <div class="tile">
+                        <div class="icon"><i class="fa-solid fa-users"></i></div>
+                        <h3 class="accent">350+</h3>
+                        <p>Estudantes de todo o país presentes fisicamente em Faro.</p>
+                    </div>
+                    <div class="tile">
+                        <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3 class="accent">20+</h3>
+                        <p>Empresas de tecnologia nacionais e internacionais envolvidas.</p>
+                    </div>
+                </div>
+                <div class="two-column extra-margin">
+                    <div class="tile">
+                        <div class="icon"><i class="fa-solid fa-calendar-day"></i></div>
+                        <h3 class="accent">4 Dias</h3>
+                        <p>De Quinta a Domingo, 4 dias repletos de conhecimento e networking.</p>
+                    </div>
+                    <div class="tile">
+                        <div class="icon"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="accent">20+</h3>
+                        <p>Masterclasses e sessões técnicas de alto nível.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Pilares Estratégicos" data-index="3">
+        <div class="slide-container" id="slide4">
+            <h2 class="slide-title">Pilares Estratégicos</h2>
+            <div class="content-area">
+                <div class="tiled-content">
+                    <div class="tile">
+                        <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3>Conhecimento</h3>
+                        <p>Transferência de saber crítico em IA, Cibersegurança e Engenharia de Software, entre outros...</p>
+                    </div>
+                    <div class="tile">
+                        <div class="icon"><i class="fa-solid fa-handshake"></i></div>
+                        <h3>Networking</h3>
+                        <p>Ponte direta entre o talento universitário e o ecossistema empresarial regional e internacional.</p>
+                    </div>
+                    <div class="tile">
+                        <div class="icon"><i class="fa-solid fa-city"></i></div>
+                        <h3>Cidadania</h3>
+                        <p>Promoção de Faro como um Hub Tecnológico moderno e atrativo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Organização" data-index="4">
+        <div class="slide-container slide-org" id="slide5">
+            <div class="title-layout">
+                <h2>Organização & <span class="accent">Comissão</span></h2>
+                <p>Liderado por David Gonçalves em parceria com o:<br>Núcleo de Estudantes de Engenharia Informática, <br>Núcleo de Estudantes de Engenharia Eletrotécnica e de Computadores, <br>Curso Engenharia de Sistemas e Tecnologias Informáticas e <br>Núcleo de Estudantes de BioEngenharia .</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="A Nossa Mesa" data-index="5">
+        <div class="slide-container" id="slide-mesa">
+            <h2 class="slide-title">A Nossa <span class="accent">Equipa</span></h2>
+            <div class="content-area">
+                <div class="two-column">
+                    <div class="mesa-section">
+                        <h3><i class="fa-solid fa-users accent"></i>Membros da Mesa (7)</h3>
+                        <table class="mesa-table">
+                            <tbody>
+                                <tr>
+                                    <td><span class="accent">Presidente</span></td>
+                                    <td>David Gonçalves</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="accent">Vice-Presidente</span></td>
+                                    <td>Diogo Almeida</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="accent">Tesoureiro</span></td>
+                                    <td>David Rodrigues</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="accent">Coordenadores de Curso</span></td>
+                                    <td>Afonso, Raquel e Rian</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="accent">Secretário</span></td>
+                                    <td>David Silvestre</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="accent">Secretário Adjunto</span></td>
+                                    <td>Afonso Bitoque</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mesa-section">
+                        <h3><i class="fa-solid fa-building accent"></i>Departamentos (30+ Voluntários)</h3>
+                        <ul class="departamentos-list">
+                            <li><strong>Departamento de Logística:</strong> Coordenação de espaços, alojamento, transportes e pessoas.</li>
+                            <li><strong>Departamento de Marketing:</strong> Comunicação, redes sociais e branding do evento.</li>
+                            <li><strong>Departamento Comercial:</strong> Contacto com sponsors e parceiros empresariais.</li>
+                            <li><strong>Departamento de Atividades Sociais:</strong> Organização de momentos de networking e lazer.</li>
+                            <li><strong>Departamento de Tecnologia:</strong> Website, inscrições e infraestrutura digital.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Infraestruturas" data-index="6">
+        <div class="slide-container slide-infra" id="slide6">
+            <h2 class="slide-title">Infraestruturas</h2>
+            <p class="infra-subtitle">Planos e alternativas para sediar o ENEI 2027</p>
+            <div class="content-area">
+                <div class="infra-plans">
+                    <!-- Plano 1 -->
+                    <div class="plan-card plan-primary">
+                        <div class="plan-header">
+                            <span class="plan-number">1</span>
+                            <h3>Plano Principal</h3>
+                        </div>
+                        <div class="plan-content">
+                            <div class="plan-section">
+                                <i class="fa-solid fa-building accent"></i>
+                                <div>
+                                    <strong>Sede do Evento</strong>
+                                    <p>Conservatório Regional de Faro</p>
+                                </div>
+                            </div>
+                            <div class="plan-section">
+                                <i class="fa-solid fa-bed accent"></i>
+                                <div>
+                                    <strong>Alojamento</strong>
+                                    <p>Liceu de Faro</p>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/ConservatorioAlgarve.JPG">
+                            <img src="https://aejdfaro.pt/wp-content/uploads/2020/12/aejd_vista_aerea.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Plano 2 -->
+                    <div class="plan-card plan-secondary">
+                        <div class="plan-header">
+                            <span class="plan-number">2</span>
+                            <h3>Backup Plan A</h3>
+                        </div>
+                        <div class="plan-content">
+                            <div class="plan-section">
+                                <i class="fa-solid fa-building accent"></i>
+                                <div>
+                                    <strong>Sede do Evento</strong>
+                                    <p>IPDJ Faro</p>
+                                </div>
+                            </div>
+                            <div class="plan-section">
+                                <i class="fa-solid fa-bed accent"></i>
+                                <div>
+                                    <strong>Alojamento</strong>
+                                    <p>Tomás Cabreira</p>
+                                </div>
+                            </div>
+                            <img src="https://www.sulinformacao.pt/wp-content/uploads/2025/01/CR_Fotos-de-Faro-277-scaled-1.jpg">
+                            <img src="https://www.nauticalfaro.com/wp-content/uploads/2021/09/escola.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Plano 3 -->
+                    <div class="plan-card plan-tertiary">
+                        <div class="plan-header">
+                            <span class="plan-number">3</span>
+                            <h3>Backup Plan B</h3>
+                        </div>
+                        <div class="plan-content">
+                            <div class="plan-section">
+                                <i class="fa-solid fa-building accent"></i>
+                                <div>
+                                    <strong>Sede do Evento</strong>
+                                    <p>Universidade da Penha</p>
+                                </div>
+                            </div>
+                            <div class="plan-section">
+                                <i class="fa-solid fa-bed accent"></i>
+                                <div>
+                                    <strong>Alojamento</strong>
+                                    <p>Pavilhão Municipal da Penha</p>
+                                </div>
+                            </div>
+                            A<img src="https://www.ualg.pt/sites/default/files/styles/galeria_full/public/gallery/2020-09/1110.jpg?itok=H6BBj20Y">
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUiu69-fQ07J0_SSl8Qm8SxjpbN2B-pl2Um5enkkUXjj7oWuCWdeKCx_DUMdp2wI2CpVKLRNT259CuA6mbuqkzH70FZCUMWN558jpkwKaRHikG4wc7fwU7662xmgcXsfX2RdYURw=s1360-w1360-h1020">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sessão de Abertura Opcional -->
+                <div class="opening-optional">
+                    <i class="fa-solid fa-star accent"></i>
+                    <span><strong>Sessão de Abertura (Opcional):</strong> Teatro das Figuras</span>
+                    <img src="https://www.cm-faro.pt/util/imgLoader.ashx?img=/upload_files/client_id_1/website_id_5/Imagens/turismo/patrimonio/teatro_das_figuras/teatro_municipal.jpg&h=240">"
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Plano de Execução" data-index="7">
+        <div class="slide-container" id="slide7">
+            <h2 class="slide-title">Plano de Execução</h2>
+            <div class="content-area">
+                <div class="table-layout">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Descrição</th>
+                                <th>Público Alvo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="accent">Feira de Empresas</span></td>
+                                <td>Feira de emprego com foco em recrutamento direto e contacto com empresas.</td>
+                                <td>Empresas & Estudantes</td>
+                            </tr>
+                            <tr>
+                                <td><span class="accent">Workshops</span></td>
+                                <td>Sessões práticas de 10 a 15 pessoas com profissionais da área.</td>
+                                <td>Estudantes</td>
+                            </tr>
+                            <tr>
+                                <td><span class="accent">Palestras</span></td>
+                                <td>Apresentações por profissionais de empresas nacionais e internacionais.</td>
+                                <td>Todos os participantes</td>
+                            </tr>
+                            <tr>
+                                <td><span class="accent">Tertúlias Académicas</span></td>
+                                <td>Conversas informais com professores da Universidade do Algarve.</td>
+                                <td>Estudantes</td>
+                            </tr>
+                            <tr>
+                                <td><span class="accent">Tertúlia Digital</span></td>
+                                <td>Encontro com influencers da área tech.</td>
+                                <td>Estudantes</td>
+                            </tr>
+                            <tr>
+                                <td><span class="accent">Passeio Matinal</span></td>
+                                <td>Sessão de relaxamento na praia ao nascer do sol.</td>
+                                <td>Todos os participantes</td>
+                            </tr>
+                            <tr>
+                                <td><span class="accent">CTF's</span></td>
+                                <td>Competições de Capture The Flag ao longo dos dias com prémios.</td>
+                                <td>Estudantes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Calendário" data-index="8">
+        <div class="slide-container" id="slide-calendario">
+            <h2 class="slide-title">Calendário <span class="accent">ENEI 2027</span></h2>
+            <p class="calendario-subtitle">4 dias de imersão tecnológica em Faro • 10:00 às 22:00</p>
+            <div class="content-area">
+                <div class="calendario-excel">
+                    <table class="tabela-horarios">
+                        <thead>
+                            <tr>
+                                <th class="col-hora">Hora</th>
+                                <th class="col-dia">Quinta (Dia 1)</th>
+                                <th class="col-dia">Sexta (Dia 2)</th>
+                                <th class="col-dia">Sábado (Dia 3)</th>
+                                <th class="col-dia">Domingo (Dia 4)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="hora-label">10:00</td>
+                                <td class="vazio">-</td>
+                                <td class="celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshops</td>
+                                <td class="celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshops</td>
+                                <td class="celula-especial" rowspan="2"><i class="fa-solid fa-sun"></i> Relaxamento<br>Praia</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">11:00</td>
+                                <td class="vazio">-</td>
+                                <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+                                <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">12:00</td>
+                                <td class="vazio">-</td>
+                                <td class="celula-refeicao" colspan="2"><i class="fa-solid fa-utensils"></i> Almoço</td>
+                                <td class="celula-refeicao"><i class="fa-solid fa-utensils"></i> Almoço</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">13:00</td>
+                                <td class="vazio">-</td>
+                                <td class="celula-refeicao" colspan="2"><i class="fa-solid fa-utensils"></i> Almoço</td>
+                                <td class="celula-refeicao"><i class="fa-solid fa-utensils"></i> Almoço</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">14:00</td>
+                                <td class="vazio">-</td>
+                                <td class="celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshops</td>
+                                <td class="celula-workshop"><i class="fa-solid fa-laptop-code"></i> Workshops</td>
+                                <td class="celula-tertulia" rowspan="2"><i class="fa-solid fa-comments"></i> Última<br>Tertúlia</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">15:00</td>
+                                <td class="celula-checkin" rowspan="3"><i class="fa-solid fa-id-card"></i> Check-ins</td>
+                                <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+                                <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">16:00</td>
+                                <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+                                <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+                                <td class="celula-encerramento" rowspan="2"><i class="fa-solid fa-trophy"></i> Encerramento<br>& Prémios</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">16:30</td>
+                                <td class="celula-coffee" colspan="2"><i class="fa-solid fa-mug-hot"></i> Coffee Break</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">17:00</td>
+                                <td class="vazio">-</td>
+                                <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+                                <td class="celula-palestra"><i class="fa-solid fa-microphone"></i> Palestra</td>
+                                <td class="vazio">-</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">18:00</td>
+                                <td class="celula-especial" rowspan="2"><i class="fa-solid fa-handshake"></i> Boas-vindas</td>
+                                <td class="celula-tertulia" rowspan="2"><i class="fa-solid fa-comments"></i> Tertúlia</td>
+                                <td class="celula-tertulia" rowspan="2"><i class="fa-solid fa-comments"></i> Tertúlia</td>
+                                <td class="vazio">-</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">19:00</td>
+                                <td class="vazio">-</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">20:00</td>
+                                <td class="celula-especial" rowspan="2"><i class="fa-solid fa-utensils"></i> Arraial +<br>Jantar</td>
+                                <td class="celula-refeicao" rowspan="2"><i class="fa-solid fa-utensils"></i> Jantar</td>
+                                <td class="celula-refeicao" rowspan="2"><i class="fa-solid fa-utensils"></i> Jantar</td>
+                                <td class="vazio">-</td>
+                            </tr>
+                            <tr>
+                                <td class="hora-label">21:00</td>
+                                <td class="vazio">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="legenda-calendario">
+                        <span class="legenda-item"><i class="fa-solid fa-briefcase"></i> Feira Empresas (Todo o dia)</span>
+                        <span class="legenda-item"><i class="fa-solid fa-laptop-code"></i> Workshops (10-12h, 14-16h)</span>
+                        <span class="legenda-item"><i class="fa-solid fa-microphone"></i> Palestras (Hora em hora)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Alimentação" data-index="9">
+        <div class="slide-container" id="slide-alimentacao">
+            <h2 class="slide-title">Plano de <span class="accent">Alimentação</span></h2>
+            <p class="alimentacao-subtitle">Refeições nutritivas e económicas para todos os participantes</p>
+            <div class="content-area">
+                <div class="refeicoes-grid">
+                    <div class="refeicao-card">
+                        <div class="refeicao-header pequeno-almoco">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h3>Pequeno-Almoço</h3>
+                        </div>
+                        <div class="refeicao-content">
+                            <div class="refeicao-item">
+                                <i class="fa-solid fa-bread-slice"></i>
+                                <span>1 Pão</span>
+                            </div>
+                            <div class="refeicao-item">
+                                <i class="fa-solid fa-cheese"></i>
+                                <span>1 Fatia de Queijo <em>ou</em> Fiambre <em>ou ambos</em></span>
+                            </div>
+                            <div class="refeicao-item">
+                                <i class="fa-solid fa-cookie-bite"></i>
+                                <span>1 Queque</span>
+                            </div>
+                            <div class="refeicao-item">
+                                <i class="fa-solid fa-bottle-water"></i>
+                                <span>1 Pacote de Sumo <em>ou</em> Leite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="refeicao-card">
+                        <div class="refeicao-header almoco">
+                            <i class="fa-solid fa-utensils"></i>
+                            <h3>Almoço</h3>
+                        </div>
+                        <div class="refeicao-content">
+                            <p class="refeicao-descricao">Comidas fáceis e económicas:</p>
+                            <div class="refeicao-opcoes">
+                                <div class="opcao-item">
+                                    <i class="fa-solid fa-bowl-food"></i>
+                                    <span>Massa à Bolonhesa</span>
+                                </div>
+                                <div class="opcao-item">
+                                    <i class="fa-solid fa-drumstick-bite"></i>
+                                    <span>Arroz de Pato</span>
+                                </div>
+                                <div class="opcao-item">
+                                    <i class="fa-solid fa-fish"></i>
+                                    <span>Filetes de Peixe Dourados com Arroz</span>
+                                </div>
+                            </div>
+                            <div class="bebidas">
+                                <i class="fa-solid fa-glass-water"></i>
+                                <span>2 Copos de Sumo por membro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="refeicao-card">
+                        <div class="refeicao-header jantar">
+                            <i class="fa-solid fa-moon"></i>
+                            <h3>Jantar</h3>
+                        </div>
+                        <div class="refeicao-content">
+                            <p class="refeicao-descricao">Igual ao almoço, com raras exceções</p>
+                            <div class="refeicao-opcoes">
+                                <div class="opcao-item">
+                                    <i class="fa-solid fa-bowl-food"></i>
+                                    <span>Esparguete com Carne Picada</span>
+                                </div>
+                                <div class="opcao-item">
+                                    <i class="fa-solid fa-drumstick-bite"></i>
+                                    <span>Arroz de Pato</span>
+                                </div>
+                                <div class="opcao-item">
+                                    <i class="fa-solid fa-fish"></i>
+                                    <span>Douradinhos com Arroz</span>
+                                </div>
+                            </div>
+                            <div class="bebidas">
+                                <i class="fa-solid fa-glass-water"></i>
+                                <span>2 Copos de Sumo por membro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="alimentacao-nota"><i class="fa-solid fa-circle-info"></i> Opções vegetarianas disponíveis mediante pedido prévio</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Planos de Bilhetes" data-index="10">
+        <div class="slide-container" id="slide-bilhetes">
+            <h2 class="slide-title">Planos de <span class="accent">Bilhetes</span></h2>
+            <p class="bilhetes-subtitle">Escolhe o plano que melhor se adapta às tuas necessidades</p>
+            <div class="content-area">
+                <div class="bilhetes-grid">
+                    <div class="bilhete-card basico">
+                        <div class="bilhete-header">
+                            <span class="bilhete-preco">15€</span>
+                            <h3>Faro Residente</h3>
+                        </div>
+                        <div class="bilhete-content">
+                            <p class="bilhete-publico"><i class="fa-solid fa-user"></i> Moradores de Faro</p>
+                            <ul class="bilhete-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Acesso ao evento</li>
+                                <li><i class="fa-solid fa-check"></i> Palestras & Workshops</li>
+                                <li><i class="fa-solid fa-check"></i> Feira de Empresas</li>
+                                <li class="nao-inclui"><i class="fa-solid fa-xmark"></i> Sem alimentação</li>
+                                <li class="nao-inclui"><i class="fa-solid fa-xmark"></i> Sem estadia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bilhete-card alimentacao">
+                        <div class="bilhete-header">
+                            <span class="bilhete-preco">25€</span>
+                            <h3>Alimentação</h3>
+                        </div>
+                        <div class="bilhete-content">
+                            <p class="bilhete-publico"><i class="fa-solid fa-user"></i> Todos os participantes</p>
+                            <ul class="bilhete-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Acesso ao evento</li>
+                                <li><i class="fa-solid fa-check"></i> Palestras & Workshops</li>
+                                <li><i class="fa-solid fa-check"></i> Feira de Empresas</li>
+                                <li><i class="fa-solid fa-check"></i> 2 refeições incluídas</li>
+                                <li class="nao-inclui"><i class="fa-solid fa-xmark"></i> Sem estadia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bilhete-card completo">
+                        <div class="bilhete-header">
+                            <span class="bilhete-preco">35€</span>
+                            <h3>Completo</h3>
+                        </div>
+                        <div class="bilhete-content">
+                            <p class="bilhete-publico"><i class="fa-solid fa-user-graduate"></i> Estudantes externos</p>
+                            <ul class="bilhete-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Acesso ao evento</li>
+                                <li><i class="fa-solid fa-check"></i> Palestras & Workshops</li>
+                                <li><i class="fa-solid fa-check"></i> Feira de Empresas</li>
+                                <li><i class="fa-solid fa-check"></i> 3 refeições incluídas</li>
+                                <li><i class="fa-solid fa-check"></i> Estadia incluída</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bilhete-card externo">
+                        <div class="bilhete-header">
+                            <span class="bilhete-preco">50€</span>
+                            <h3>Pro Básico</h3>
+                        </div>
+                        <div class="bilhete-content">
+                            <p class="bilhete-publico"><i class="fa-solid fa-briefcase"></i> Profissionais</p>
+                            <ul class="bilhete-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Acesso às Palestras</li>
+                                <li><i class="fa-solid fa-check"></i> Networking</li>
+                                <li><i class="fa-solid fa-check"></i> Certificado</li>
+                                <li class="nao-inclui"><i class="fa-solid fa-xmark"></i> Sem almoço</li>
+                                <li class="nao-inclui"><i class="fa-solid fa-xmark"></i> Sem coffee break</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bilhete-card externo-premium">
+                        <div class="bilhete-header">
+                            <span class="bilhete-preco">65€</span>
+                            <h3>Pro Plus</h3>
+                        </div>
+                        <div class="bilhete-content">
+                            <p class="bilhete-publico"><i class="fa-solid fa-briefcase"></i> Profissionais</p>
+                            <ul class="bilhete-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Acesso às Palestras</li>
+                                <li><i class="fa-solid fa-check"></i> Networking</li>
+                                <li><i class="fa-solid fa-check"></i> Certificado</li>
+                                <li><i class="fa-solid fa-check"></i> Almoço incluído</li>
+                                <li><i class="fa-solid fa-check"></i> Coffee Break</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bilhete-card especial incompleto">
+                        <div class="bilhete-header">
+                            <span class="bilhete-preco">TBD</span>
+                            <h3>Tertúlia VIP</h3>
+                        </div>
+                        <div class="bilhete-content">
+                            <p class="bilhete-publico"><i class="fa-solid fa-star"></i> Dia especial</p>
+                            <ul class="bilhete-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Acesso ao dia da Tertúlia</li>
+                                <li class="incompleto"><i class="fa-solid fa-question"></i> Benefícios em definição</li>
+                            </ul>
+                            <span class="badge-incompleto">Em desenvolvimento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Roadmap" data-index="11">
+        <div class="slide-container" id="slide11">
+            <h2 class="slide-title">Roadmap de <span class="accent">Execução</span></h2>
+            <div class="content-area">
+                <div class="timeline-layout">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item">
+                        <h3>Abril 2026</h3>
+                        <div class="timeline-dot"></div>
+                        <p>Submissão Oficial da<br><strong>Pré-Candidatura</strong></p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Jul-Ago 2026</h3>
+                        <div class="timeline-dot"></div>
+                        <p>Processo de Candidatura<br><span class="accent">Definição do Vencedor</span></p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Ago-Jan 2027</h3>
+                        <div class="timeline-dot"></div>
+                        <p>Angariação de Sponsors<br>Contacto com Entidades</p>
+                    </div>
+                    <div class="timeline-item destaque">
+                        <h3>Abril 2027</h3>
+                        <div class="timeline-dot"></div>
+                        <p><span class="accent">ENEI 2027</span><br><strong>FARO</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" data-title="Contacto" data-index="12">
+        <div class="slide-container slide-final" id="slide12">
+            <div class="title-layout">
+                <h2 class="accent">Vamos Construir o Futuro?</h2>
+                <p>David Gonçalves | Presidente da Comissão ENEI Faro</p>
+                <div class="contact-box contact-multi">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>919 105 170</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>davidpgoncalves03@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>neei@aaualg.pt <em>(Provisório)</em></span>
+                    </div>
+                    <div class="contact-item previsto">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>coenei@aaualg.pt <em>(Previsto - não ativo)</em></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-title-bar">
+    <span class="slide-title-display" id="slide-title">Capa</span>
+</div>
+
+<div class="slide-controls">
+    <button class="nav-arrow" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="slide-dots" id="slide-dots"></div>
+    <button class="nav-arrow" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.getElementById('slide-dots');
+const titleDisplay = document.getElementById('slide-title');
+const currentSlideDisplay = document.getElementById('current-slide');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+let currentSlide = 0;
+const totalSlides = slides.length;
+
+// Criar dots
+slides.forEach((slide, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.dot');
+
+function updateSlide() {
+    slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentSlide);
+    });
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+    titleDisplay.textContent = slides[currentSlide].dataset.title;
+    currentSlideDisplay.textContent = String(currentSlide + 1).padStart(2, '0');
+}
+
+function goToSlide(index) {
+    if (index >= 0 && index < totalSlides) {
+        currentSlide = index;
+        updateSlide();
+    }
+}
+
+function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlide();
+    }
+}
+
+function prevSlide() {
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+    }
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+// Teclado
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+});
+
+// Touch/Swipe
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchStartX - touchEndX > 50) nextSlide();
+    if (touchEndX - touchStartX > 50) prevSlide();
+});
+
+// Fullscreen
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+const fullscreenIcon = fullscreenBtn.querySelector('i');
+
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else {
+        document.exitFullscreen();
+    }
+}
+
+fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+// Atualizar ícone quando mudar fullscreen
+document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement) {
+        fullscreenIcon.classList.remove('fa-expand');
+        fullscreenIcon.classList.add('fa-compress');
+    } else {
+        fullscreenIcon.classList.remove('fa-compress');
+        fullscreenIcon.classList.add('fa-expand');
+    }
+});
+</script>
+
+</body>
+</html>
