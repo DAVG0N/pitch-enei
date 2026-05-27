@@ -5,7 +5,7 @@
   import MealCard from './components/MealCard.svelte';
 
   let currentSlide = 0;
-  const totalSlides = 12;
+  const totalSlides = 13;
 
   // Lista dos títulos dos slides para a barra inferior e navegação
   const slideTitles = [
@@ -13,6 +13,7 @@
     "O Que é o ENEI?",
     "Magnitude e Impacto",
     "Pilares Estratégicos",
+    "Empresas Parceiras",
     "Organização e Comissão",
     "Infraestruturas",
     "Plano de Execução",
@@ -21,6 +22,28 @@
     "Planos de Bilhetes",
     "Roadmap",
     "Contacto"
+  ];
+
+  // Empresas de edições anteriores (Sponsors Históricos)
+  const pastSponsors = [
+    { nome: "Uphold (Gold Sponsor)", logo: "/assets/sponsors/gold/uphold.svg", cor: "#EFBF04" },
+    { nome: "McDigital (Silver Sponsor)", logo: "/assets/sponsors/silver/mcdigital.png", cor: "#C4C4C4" },
+    { nome: "NVIDIA", logo: "/assets/speakers/nvidia.svg", cor: "#76B900" },
+    { nome: "RetailConsult (Gold Sponsor)", logo: "/assets/sponsors/gold/retailconsult.svg", cor: "#EFBF04" },
+    { nome: "Checkmarx (Silver Sponsor)", logo: "/assets/sponsors/silver/checkmarx.svg", cor: "#C4C4C4" },
+    { nome: "SupaBase", logo: "/assets/speakers/supabase.svg", cor: "#3ECF8E" },
+    { nome: "Agentif AI (Gold Sponsor)", logo: "/assets/sponsors/gold/agentifai.svg", cor: "#EFBF04" },
+    { nome: "Deloitte (Silver Sponsor)", logo: "/assets/sponsors/silver/deloitte.svg", cor: "#C4C4C4" },
+    { nome: "Google", logo: "/assets/speakers/google.svg", cor: "#4285F4" },
+    { nome: "Accenture (Gold Sponsor)", logo: "/assets/sponsors/gold/accenture.svg", cor: "#EFBF04" },
+    { nome: "Glintt Global (Silver Sponsor)", logo: "/assets/sponsors/silver/glinttglobal.svg", cor: "#C4C4C4" },
+    { nome: "Snapchat", logo: "/assets/speakers/snapchat.svg", cor: "#FFFC00" },
+    { nome: "LTP (Silver Sponsor)", logo: "/assets/sponsors/silver/ltp.svg", cor: "#C4C4C4" },
+    { nome: "Replai (Silver Sponsor)", logo: "/assets/sponsors/silver/replai.svg", cor: "#C4C4C4" },
+    { nome: "Github", logo: "/assets/speakers/github.svg", cor: "#181717" },
+    { nome: "Nutrium (Silver Sponsor)", logo: "/assets/sponsors/silver/nutrium.svg", cor: "#C4C4C4" },
+    { nome: "AWS", logo: "/assets/speakers/aws.svg", cor: "#FF9900" },
+    { nome: "Adidas (Bronze Sponsor)", logo: "/assets/sponsors/bronze/adidas.svg", cor: "#CE8946" }
   ];
 
   // Dados das Refeições
@@ -178,7 +201,7 @@
       icon: "fa-bullhorn",
       diretor: "Raquel",
       membros: [
-        "Jorge; CC", 
+        "Jorge; mkt", 
         "Inês Campelo; Mkt"
       ]
     },
@@ -189,6 +212,7 @@
       icon: "fa-wallet",
       diretor: "Mohammed Rohaim",
       membros: [
+        "João; LEI",
         "Duarte Cunha; LEI", 
         "José Tico; LEI",
         "Matilde; BioEng",
@@ -463,8 +487,33 @@
     </div>
   </Slide>
 
-  <!-- Slide 4: Organização e Comissão -->
-  <Slide title="Organização e Comissão" index={4} {currentSlide} id="slide-organizacao-comissao">
+  <!-- Slide 4: Empresas em Edições Anteriores -->
+  <Slide title="Empresas Parceiras" index={4} {currentSlide} id="slide-empresas-parceiras">
+    <h2 class="slide-title">Empresas de <span class="accent">Edições Anteriores</span></h2>
+    <p class="empresas-subtitle">O ENEI tem um histórico de parcerias com marcas líderes globais e nacionais</p>
+    <div class="content-area">
+      <div class="past-sponsors-carousel">
+        {#each pastSponsors as sponsor}
+          <div class="past-sponsor-card">
+            <div class="sponsor-top-bar" style="background-color: {sponsor.cor};"></div>
+            <div class="sponsor-logo-container">
+              <img src={sponsor.logo} alt={sponsor.nome} class="sponsor-logo" on:error={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextElementSibling.style.display = 'block';
+              }} />
+              <div class="sponsor-logo-fallback" style="display: none; color: {sponsor.cor};">
+                {sponsor.nome[0].toUpperCase()}{sponsor.nome.slice(1, 3).toLowerCase()}
+              </div>
+            </div>
+            <span class="sponsor-name">{sponsor.nome}</span>
+          </div>
+        {/each}
+      </div>
+    </div>
+  </Slide>
+
+  <!-- Slide 5: Organização e Comissão -->
+  <Slide title="Organização e Comissão" index={5} {currentSlide} id="slide-organizacao-comissao">
     <h2 class="slide-title">Organização & <span class="accent">Comissão</span></h2>
     <p class="comissao-subtitle" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-faint); margin-top: -30px; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1.5px; padding-left: 24px; text-align: left; width: 100%;">Liderado por David Gonçalves em parceria com o NEEI, NEEC, LESTI, BioEng, MKT e CC</p>
     
@@ -516,8 +565,8 @@
     </div>
   </Slide>
 
-  <!-- Slide 5: Infraestruturas -->
-  <Slide title="Infraestruturas" index={5} {currentSlide} customClass="slide-infra" id="slide6">
+  <!-- Slide 6: Infraestruturas -->
+  <Slide title="Infraestruturas" index={6} {currentSlide} customClass="slide-infra" id="slide6">
     <h2 class="slide-title">Infraestruturas <span class="accent">de Faro</span></h2>
     <p class="infra-subtitle">Planos estratégicos e alternativas de alojamento e sede para o ENEI 2027</p>
     <div class="content-area">
@@ -652,7 +701,7 @@
   </Slide>
 
   <!-- Slide 6: Plano de Execução -->
-  <Slide title="Plano de Execução" index={6} {currentSlide} id="slide7">
+  <Slide title="Plano de Execução" index={7} {currentSlide} id="slide7">
     <h2 class="slide-title">Plano de Execução</h2>
     <div class="content-area">
       <div class="table-layout">
@@ -712,7 +761,7 @@
   </Slide>
 
   <!-- Slide 7: Calendário -->
-  <Slide title="Calendário" index={7} {currentSlide} id="slide-calendario">
+  <Slide title="Calendário" index={8} {currentSlide} id="slide-calendario">
     <h2 class="slide-title">Calendário <span class="accent">ENEI 2027</span></h2>
     <p class="calendario-subtitle">4 dias de imersão tecnológica em Faro • 10:00 às 22:00</p>
     <div class="content-area">
@@ -912,7 +961,7 @@
   </Slide>
 
   <!-- Slide 8: Alimentação -->
-  <Slide title="Alimentação" index={8} {currentSlide} id="slide-alimentacao">
+  <Slide title="Alimentação" index={9} {currentSlide} id="slide-alimentacao">
     <h2 class="slide-title">Plano de <span class="accent">Alimentação</span></h2>
     <p class="alimentacao-subtitle">Refeições nutritivas e económicas para todos os participantes</p>
     <div class="content-area">
@@ -933,7 +982,7 @@
   </Slide>
 
   <!-- Slide 9: Planos de Bilhetes -->
-  <Slide title="Planos de Bilhetes" index={9} {currentSlide} id="slide-bilhetes">
+  <Slide title="Planos de Bilhetes" index={10} {currentSlide} id="slide-bilhetes">
     <h2 class="slide-title">Planos de <span class="accent">Bilhetes</span></h2>
     <p class="bilhetes-subtitle">Escolhe o plano que melhor se adapta às tuas necessidades</p>
     <div class="content-area">
@@ -953,7 +1002,7 @@
   </Slide>
 
   <!-- Slide 10: Roadmap -->
-  <Slide title="Roadmap" index={10} {currentSlide} id="slide11">
+  <Slide title="Roadmap" index={11} {currentSlide} id="slide11">
     <h2 class="slide-title">Roadmap de <span class="accent">Execução</span></h2>
     <div class="content-area">
       <div class="timeline-layout">
@@ -972,7 +1021,7 @@
   </Slide>
 
   <!-- Slide 11: Contacto -->
-  <Slide title="Contacto" index={11} {currentSlide} customClass="slide-final" id="slide12">
+  <Slide title="Contacto" index={12} {currentSlide} customClass="slide-final" id="slide12">
     <div class="title-layout">
       <h2 class="accent">Vamos Construir o Futuro?</h2>
       <p>David Gonçalves | Presidente da Comissão Organizadora do ENEI Faro 2027</p>
