@@ -5,13 +5,12 @@
   import MealCard from './components/MealCard.svelte';
 
   let currentSlide = 0;
-  const totalSlides = 13;
+  const totalSlides = 12;
 
   // Lista dos títulos dos slides para a barra inferior e navegação
   const slideTitles = [
     "Capa",
     "O Que é o ENEI?",
-    "Magnitude e Impacto",
     "Pilares Estratégicos",
     "Empresas Parceiras",
     "Organização e Comissão",
@@ -126,30 +125,6 @@
       ]
     },
     {
-      preco: "50€",
-      nome: "Passe Geral (N/Estudantes)",
-      cardType: "externo",
-      beneficios: [
-        { texto: "Acesso a 4 dias de evento", incluido: true },
-        { texto: "Palestras & Workshops", incluido: true },
-        { texto: "Feira de Empresas", incluido: true },
-        { texto: "Sem alimentação", incluido: false },
-        { texto: "Sem estadia", incluido: false }
-      ]
-    },
-    {
-      preco: "65€",
-      nome: "Passe c/Alimentação (N/Estudantes)",
-      cardType: "externo-premium",
-      beneficios: [
-        { texto: "Tudo do Passe Geral", incluido: true },
-        { texto: "Almoço & Jantar", incluido: true },
-        { texto: "Coffee Break", incluido: true },
-        { texto: "Sem Pequeno Almoço", incluido: false },
-        { texto: "Sem estadia", incluido: false }
-      ]
-    },
-    {
       preco: "TBD",
       nome: "Tertúlia VIP",
       cardType: "especial",
@@ -212,7 +187,7 @@
       icon: "fa-wallet",
       diretor: "Mohammed Rohaim",
       membros: [
-        "João; LEI",
+        "João Teixeira; LEI",
         "Duarte Cunha; LEI", 
         "José Tico; LEI",
         "Matilde; BioEng",
@@ -261,6 +236,14 @@
 
   function closeModal() {
     activeModal = null;
+  }
+
+  // Lógica de Scroll do Carrossel de Bilhetes
+  let ticketsGridElement;
+  function scrollTickets(amount) {
+    if (ticketsGridElement) {
+      ticketsGridElement.scrollBy({ left: amount, behavior: 'smooth' });
+    }
   }
 
   // Passos do Roadmap de Execução
@@ -427,16 +410,8 @@
   </Slide>
 
   <!-- Slide 1: O Que é o ENEI? -->
-  <Slide title="O Que é o ENEI?" index={1} {currentSlide} customClass="slide-what-is" id="slide2">
-    <div class="title-layout">
-      <h2>O Que é o <span class="accent">ENEI</span>?</h2>
-      <p>Fundado para unir a academia e a indústria, o Encontro Nacional de Estudantes de Informática é o fórum de referência para os futuros líderes tecnológicos de Portugal.</p>
-    </div>
-  </Slide>
-
-  <!-- Slide 2: Magnitude e Impacto -->
-  <Slide title="Magnitude e Impacto" index={2} {currentSlide} id="slide3">
-    <h2 class="slide-title">Magnitude e Impacto</h2>
+  <Slide title="O Que é o ENEI?" index={1} {currentSlide} id="slide2">
+    <h2 class="slide-title">O Que é o <span class="accent">ENEI</span>?</h2>
     <div class="content-area">
       <div class="two-column">
         <div class="tile">
@@ -463,8 +438,8 @@
     </div>
   </Slide>
 
-  <!-- Slide 3: Pilares Estratégicos -->
-  <Slide title="Pilares Estratégicos" index={3} {currentSlide} id="slide4">
+  <!-- Slide 2: Pilares Estratégicos -->
+  <Slide title="Pilares Estratégicos" index={2} {currentSlide} id="slide3">
     <h2 class="slide-title">Pilares Estratégicos</h2>
     <div class="content-area">
       <div class="tiled-content">
@@ -487,8 +462,8 @@
     </div>
   </Slide>
 
-  <!-- Slide 4: Empresas em Edições Anteriores -->
-  <Slide title="Empresas Parceiras" index={4} {currentSlide} id="slide-empresas-parceiras">
+  <!-- Slide 3: Empresas Parceiras -->
+  <Slide title="Empresas Parceiras" index={3} {currentSlide} id="slide-empresas-parceiras">
     <h2 class="slide-title">Empresas de <span class="accent">Edições Anteriores</span></h2>
     <p class="empresas-subtitle">O ENEI tem um histórico de parcerias com marcas líderes globais e nacionais</p>
     <div class="content-area">
@@ -512,8 +487,8 @@
     </div>
   </Slide>
 
-  <!-- Slide 5: Organização e Comissão -->
-  <Slide title="Organização e Comissão" index={5} {currentSlide} id="slide-organizacao-comissao">
+  <!-- Slide 4: Organização e Comissão -->
+  <Slide title="Organização e Comissão" index={4} {currentSlide} id="slide-organizacao-comissao">
     <h2 class="slide-title">Organização & <span class="accent">Comissão</span></h2>
     <p class="comissao-subtitle" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-faint); margin-top: -30px; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1.5px; padding-left: 24px; text-align: left; width: 100%;">Liderado por David Gonçalves em parceria com o NEEI, NEEC, LESTI, BioEng, MKT e CC</p>
     
@@ -565,8 +540,8 @@
     </div>
   </Slide>
 
-  <!-- Slide 6: Infraestruturas -->
-  <Slide title="Infraestruturas" index={6} {currentSlide} customClass="slide-infra" id="slide6">
+  <!-- Slide 5: Infraestruturas -->
+  <Slide title="Infraestruturas" index={5} {currentSlide} customClass="slide-infra" id="slide5">
     <h2 class="slide-title">Infraestruturas <span class="accent">de Faro</span></h2>
     <p class="infra-subtitle">Planos estratégicos e alternativas de alojamento e sede para o ENEI 2027</p>
     <div class="content-area">
@@ -592,7 +567,7 @@
               <i class="fa-solid fa-bed"></i>
               <div>
                 <strong>Alojamento</strong>
-                <p>Liceu de Faro</p>
+                <p>Escola Secundária Tomás Cabreira</p>
               </div>
             </div>
             <div class="plan-images-row">
@@ -601,7 +576,7 @@
                 <span class="image-label">Sede</span>
               </div>
               <div class="plan-image-wrapper">
-                <img src="/assets/images/liceu-faro-aerea.jpg" alt="Vista aérea do Liceu de Faro">
+                <img src="/assets/images/escola-nautical.jpg" alt="Escola Secundária Tomás Cabreira">
                 <span class="image-label">Alojamento</span>
               </div>
             </div>
@@ -622,44 +597,7 @@
               <i class="fa-solid fa-building"></i>
               <div>
                 <strong>Sede do Evento</strong>
-                <p>IPDJ Faro</p>
-              </div>
-            </div>
-            <div class="plan-section">
-              <i class="fa-solid fa-bed"></i>
-              <div>
-                <strong>Alojamento</strong>
-                <p>Tomás Cabreira</p>
-              </div>
-            </div>
-            <div class="plan-images-row">
-              <div class="plan-image-wrapper">
-                <img src="/assets/images/faro-277.jpg" alt="Vista aérea de Faro">
-                <span class="image-label">Sede</span>
-              </div>
-              <div class="plan-image-wrapper">
-                <img src="/assets/images/escola-nautical.jpg" alt="Escola Tomás Cabreira">
-                <span class="image-label">Alojamento</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Plano 3 -->
-        <div class="plan-card plan-tertiary">
-          <div class="plan-header">
-            <span class="plan-number">03</span>
-            <div class="plan-title-block">
-              <span class="plan-badge">BACKUP_B</span>
-              <h3>Backup Plan B</h3>
-            </div>
-          </div>
-          <div class="plan-content">
-            <div class="plan-section">
-              <i class="fa-solid fa-building"></i>
-              <div>
-                <strong>Sede do Evento</strong>
-                <p>Universidade da Penha</p>
+                <p>Universidade das Gambelas</p>
               </div>
             </div>
             <div class="plan-section">
@@ -671,7 +609,7 @@
             </div>
             <div class="plan-images-row">
               <div class="plan-image-wrapper">
-                <img src="/assets/images/ualg-1110.jpg" alt="Campus da Penha da UAlg">
+                <img src="/assets/images/ualg-1110.jpg" alt="Campus de Gambelas da UAlg">
                 <span class="image-label">Sede</span>
               </div>
               <div class="plan-image-wrapper">
@@ -682,26 +620,11 @@
           </div>
         </div>
       </div>
-
-      <!-- Sessão de Abertura Opcional -->
-      <div class="opening-optional">
-        <div class="opening-text">
-          <span class="opening-tag">&lt;HIGHLIGHT_VENUE /&gt;</span>
-          <div class="opening-title-container">
-            <i class="fa-solid fa-star accent"></i>
-            <h3>Sessão de Abertura (Opcional)</h3>
-          </div>
-          <p><strong>Teatro das Figuras:</strong> Espaço cultural de referência regional com acústica e estrutura de excelência para a conferência inaugural do ENEI 2027.</p>
-        </div>
-        <div class="opening-image-wrapper">
-          <img src="/assets/images/teatro-municipal.jpg" alt="Teatro das Figuras">
-        </div>
-      </div>
     </div>
   </Slide>
 
   <!-- Slide 6: Plano de Execução -->
-  <Slide title="Plano de Execução" index={7} {currentSlide} id="slide7">
+  <Slide title="Plano de Execução" index={6} {currentSlide} id="slide6">
     <h2 class="slide-title">Plano de Execução</h2>
     <div class="content-area">
       <div class="table-layout">
@@ -761,7 +684,7 @@
   </Slide>
 
   <!-- Slide 7: Calendário -->
-  <Slide title="Calendário" index={8} {currentSlide} id="slide-calendario">
+  <Slide title="Calendário" index={7} {currentSlide} id="slide-calendario">
     <h2 class="slide-title">Calendário <span class="accent">ENEI 2027</span></h2>
     <p class="calendario-subtitle">4 dias de imersão tecnológica em Faro • 10:00 às 22:00</p>
     <div class="content-area">
@@ -961,7 +884,7 @@
   </Slide>
 
   <!-- Slide 8: Alimentação -->
-  <Slide title="Alimentação" index={9} {currentSlide} id="slide-alimentacao">
+  <Slide title="Alimentação" index={8} {currentSlide} id="slide-alimentacao">
     <h2 class="slide-title">Plano de <span class="accent">Alimentação</span></h2>
     <p class="alimentacao-subtitle">Refeições nutritivas e económicas para todos os participantes</p>
     <div class="content-area">
@@ -982,27 +905,38 @@
   </Slide>
 
   <!-- Slide 9: Planos de Bilhetes -->
-  <Slide title="Planos de Bilhetes" index={10} {currentSlide} id="slide-bilhetes">
+  <Slide title="Planos de Bilhetes" index={9} {currentSlide} id="slide-bilhetes">
     <h2 class="slide-title">Planos de <span class="accent">Bilhetes</span></h2>
     <p class="bilhetes-subtitle">Escolhe o plano que melhor se adapta às tuas necessidades</p>
     <div class="content-area">
-      <div class="bilhetes-grid">
-        {#each tickets as ticket}
-          <TicketCard
-            preco={ticket.preco}
-            nome={ticket.nome}
-            publico={ticket.publico}
-            cardType={ticket.cardType}
-            incompleto={ticket.incompleto}
-            beneficios={ticket.beneficios}
-          />
-        {/each}
+      <div class="carousel-wrapper">
+        <button class="carousel-arrow prev" on:click={() => scrollTickets(-330)} aria-label="Anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="bilhetes-grid" bind:this={ticketsGridElement}>
+          {#each tickets as ticket}
+            <TicketCard
+              preco={ticket.preco}
+              nome={ticket.nome}
+              publico={ticket.publico}
+              cardType={ticket.cardType}
+              incompleto={ticket.incompleto}
+              beneficios={ticket.beneficios}
+            />
+          {/each}
+        </div>
+        <button class="carousel-arrow next" on:click={() => scrollTickets(330)} aria-label="Seguinte">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="carousel-indicator">
+        <span class="indicator-tip"><i class="fa-solid fa-left-right"></i> Arraste para ver todos os planos</span>
       </div>
     </div>
   </Slide>
 
   <!-- Slide 10: Roadmap -->
-  <Slide title="Roadmap" index={11} {currentSlide} id="slide11">
+  <Slide title="Roadmap" index={10} {currentSlide} id="slide10">
     <h2 class="slide-title">Roadmap de <span class="accent">Execução</span></h2>
     <div class="content-area">
       <div class="timeline-layout">
@@ -1021,7 +955,7 @@
   </Slide>
 
   <!-- Slide 11: Contacto -->
-  <Slide title="Contacto" index={12} {currentSlide} customClass="slide-final" id="slide12">
+  <Slide title="Contacto" index={11} {currentSlide} customClass="slide-final" id="slide11">
     <div class="title-layout">
       <h2 class="accent">Vamos Construir o Futuro?</h2>
       <p>David Gonçalves | Presidente da Comissão Organizadora do ENEI Faro 2027</p>
@@ -1176,8 +1110,7 @@
     class="nav-arrow" 
     id="next-btn" 
     aria-label="Slide seguinte"
-    on:click={() => { if (canNavigate()) nextSlide(); }}
-  >
+    on:click={() => { if (canNavigate()) nextSlide(); }}>
     <i class="fa-solid fa-chevron-right"></i>
   </button>
 </div>

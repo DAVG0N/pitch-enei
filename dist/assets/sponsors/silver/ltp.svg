@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 685.48 251.1">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #19105f;
+      }
+
+      .cls-2 {
+        fill: #007474;
+      }
+
+      .cls-3 {
+        fill: #00a590;
+      }
+
+      .cls-4 {
+        fill: #ff6b00;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-4" d="M685.48,96.88h-230.22V0s133.34,0,133.34,0c53.5,0,96.88,43.37,96.88,96.88h0Z"/>
+      <polygon class="cls-1" points="96.88 154.22 96.88 0 0 0 0 251.1 195.4 251.1 195.4 154.22 96.88 154.22"/>
+      <path class="cls-3" d="M552.15,96.88v96.88h36.46c53.5,0,96.88-43.37,96.88-96.88h-133.34Z"/>
+      <path class="cls-1" d="M244.23,0h-78.65v96.88h83.99v154.22h96.88V96.88h-5.33C287.6,96.88,244.23,53.51,244.23,0Z"/>
+      <path class="cls-4" d="M286.74-42.51h96.88V42.51c0,53.47-43.41,96.88-96.88,96.88h0V-42.51h0Z" transform="translate(383.62 -286.74) rotate(90)"/>
+      <path class="cls-2" d="M552.15,96.88v154.22s-96.88,0-96.88,0v-57.34c0-53.5,43.37-96.88,96.88-96.88h0Z"/>
+    </g>
+  </g>
+</svg>
