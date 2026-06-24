@@ -905,11 +905,44 @@ th {
 }
 
 /* Suporte para layout de múltiplos blocos e colunas internas (Workshops + Palestras) */
+/* Suporte para layout de múltiplos blocos e colunas internas (Workshops + Palestras) */
 .celula-mista,
 .celula-mista-longa {
     padding: 0 !important;
     background: transparent !important;
     border: none !important;
+}
+
+.celula-container {
+    padding: 0 !important;
+    background: transparent !important;
+    height: 1px; /* enables children height: 100% to work correctly in table cells */
+}
+
+.single-wrapper {
+    display: flex;
+    padding: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.single-wrapper.span-1 {
+    min-height: 44px;
+}
+
+.single-wrapper.span-2 {
+    min-height: 95px;
+}
+
+.single-wrapper.span-4 {
+    min-height: 190px;
+}
+
+.single-wrapper .inner-cell {
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 6px 8px;
 }
 
 .misto-wrapper {
@@ -937,7 +970,7 @@ th {
     flex-direction: column;
     gap: 4px;
     flex: 1.1;
-    height: 100%;
+    height: auto;
 }
 
 .palestras-stack-longo {
@@ -945,7 +978,7 @@ th {
     flex-direction: column;
     gap: 4px;
     flex: 1.1;
-    height: 100%;
+    height: auto;
 }
 
 .workshops-grid {
@@ -953,7 +986,7 @@ th {
     grid-template-columns: repeat(3, 1fr);
     gap: 4px;
     flex: 2.2;
-    height: 100%;
+    height: auto;
 }
 
 .workshops-stack-longo {
@@ -961,12 +994,14 @@ th {
     flex-direction: column;
     gap: 4px;
     flex: 2.2;
-    height: 100%;
+    align-self: stretch;
 }
 
-.workshops-stack-longo .workshops-grid {
+.workshops-stack-longo .workshops-grid,
+.workshops-stack-longo .celula-vazia {
     height: calc(50% - 2px);
     width: 100%;
+    box-sizing: border-box;
 }
 
 .inner-cell {
@@ -974,7 +1009,7 @@ th {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 6px 4px;
     height: 100%;
     width: 100%;
@@ -983,6 +1018,15 @@ th {
     font-weight: 500;
     line-height: 1.25;
     text-align: center;
+    position: relative;
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.inner-cell:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
+    z-index: 2;
 }
 
 .inner-cell i {
