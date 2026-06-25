@@ -279,6 +279,15 @@
     ? ((currentRoadmapStep - 1) / (roadmapSteps.length - 1)) * 100
     : 0;
 
+  // Reposiciona o scroll do slide para o topo sempre que trocamos de slide no mobile
+  $: {
+    if (currentSlide !== undefined && typeof document !== 'undefined') {
+      document.querySelectorAll('.slide-container').forEach(el => {
+        el.scrollTop = 0;
+      });
+    }
+  }
+
   // Throttle State
   let lastTransitionTime = 0;
   const TRANSITION_THROTTLE_MS = 300;

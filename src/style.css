@@ -2309,7 +2309,7 @@ th {
    ========================================================================== */
 @media (max-width: 768px) {
   .slide-container {
-    padding: 5.5rem 1.25rem 7.5rem 1.25rem;
+    padding: 5.5rem 1.25rem 5rem 1.25rem;
     height: 100vh;
     overflow-y: auto;
     display: block; /* Permite scroll vertical livre */
@@ -2662,11 +2662,22 @@ th {
   
   /* Controlos do Slider */
   .slide-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px; /* Menos alto e super compacto */
+    background: #0a0a0a; /* Fundo opaco */
+    border-top: 1px solid var(--surface-white-08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
-    bottom: 15px;
+    z-index: 1000;
+    padding: 0;
   }
   .slide-title-bar {
-    bottom: 50px;
+    display: none !important; /* Esconde o título flutuante na barra inferior no mobile */
   }
   .slide-counter {
     top: 15px;
