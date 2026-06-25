@@ -52,6 +52,29 @@
   --neutral-15: rgba(102, 102, 102, 0.15);
 }
 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 2000px) {
+  html {
+    font-size: 20px; /* Escala proporcionalmente em ecrãs gigantes de TV de 50" */
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -101,7 +124,7 @@ body {
   width: 100vw;
   justify-content: center;
   overflow: hidden;
-  padding: 60px 100px;
+  padding: 4vh 6vw; /* Adapta-se dinamicamente à largura e altura de qualquer ecrã */
   position: relative;
 }
 
@@ -151,17 +174,17 @@ body {
 .slide-container th,
 .slide-container td {
   color: var(--text-muted);
-  font-size: 18px;
+  font-size: 1.125rem; /* ~18px */
   line-height: 1.6;
 }
 
 .slide-container .slide-title {
-  font-size: 42px;
-  margin-bottom: 40px;
+  font-size: clamp(2rem, 3.5vw, 2.625rem); /* Tamanho adaptativo */
+  margin-bottom: 2.5rem;
   text-align: left;
   width: 100%;
   border-left: 4px solid var(--color-primary);
-  padding-left: 20px;
+  padding-left: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -177,27 +200,27 @@ body {
 }
 
 .title-layout h1 {
-  font-size: 80px;
+  font-size: clamp(2.5rem, 6vw, 5rem); /* Título grande da capa adaptativo */
   line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .title-layout .subtitle {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--color-primary);
 }
 
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 3.125rem;
   width: 100%;
 }
 
 .tiled-content {
   display: flex;
-  gap: 25px;
+  gap: 1.5rem;
   width: 100%;
   justify-content: center;
 }
@@ -206,11 +229,11 @@ body {
   background: var(--surface-white-03);
   border: 1px solid var(--primary-10);
   border-radius: 12px;
-  padding: 60px 30px;
+  padding: 3rem 1.875rem;
   flex: 1;
   text-align: center;
   transition: all 0.3s ease;
-  min-height: 620px;
+  min-height: 38.75rem; /* ~620px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,20 +241,20 @@ body {
 }
 
 .tile .icon {
-  font-size: 40px;
+  font-size: 2.5rem;
   color: var(--color-primary);
-  margin-bottom: 15px;
+  margin-bottom: 0.9rem;
 }
 
 .tile h3 {
-  font-size: 24px;
-  margin-bottom: 40px;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 /* Reset .tile dentro de .two-column (Magnitude e Impacto) */
 .two-column .tile {
-  padding: 30px;
-  min-height: 300px;
+  padding: 1.875rem;
+  min-height: 18.75rem; /* ~300px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,11 +262,11 @@ body {
 }
 
 .two-column .tile .icon {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .two-column .tile h3 {
-  margin-bottom: 15px;
+  margin-bottom: 0.9rem;
 }
 
 /* Tabelas */
@@ -258,7 +281,7 @@ table {
 }
 
 th, td {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: left;
   border-bottom: 1px solid var(--surface-white-05);
 }
@@ -267,7 +290,7 @@ th {
   color: var(--color-primary);
   font-family: 'JetBrains Mono', monospace;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 
@@ -2205,3 +2228,458 @@ th {
 .past-sponsor-card:hover .sponsor-name {
     color: var(--text-white);
 }
+
+/* ==========================================================================
+   4. DESKTOP SHORT VIEWPORTS (TV / Monitores 16:9 / Altura Reduzida)
+   ========================================================================== */
+@media (max-height: 850px) {
+  .slide-container {
+    padding: 2.5rem 4vw;
+  }
+  .slide-container .slide-title {
+    margin-bottom: 1.5rem;
+  }
+  .tile {
+    min-height: 28rem;
+    padding: 1.5rem 1rem;
+  }
+  .two-column .tile {
+    min-height: 14rem;
+    padding: 1rem;
+  }
+  .tile h3 {
+    margin-bottom: 1.25rem;
+  }
+  /* Slide 4 Comissão */
+  #slide-organizacao-comissao .content-area {
+    gap: 1.5rem;
+  }
+  .comissao-row-top {
+    gap: 1.25rem;
+  }
+  .comissao-info-card, .comissao-card-mesa {
+    min-height: 11rem;
+    padding: 1.5rem 2rem;
+  }
+  .comissao-card-inner {
+    gap: 1.25rem;
+  }
+  .comissao-card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+  .comissao-row-bottom {
+    gap: 1rem;
+  }
+  .comissao-dept-card {
+    min-height: 12rem;
+    padding: 1.5rem 1.25rem;
+  }
+  .dept-header i {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  /* Slide 5 Infraestrutura */
+  #slide5 .content-area {
+    gap: 1.25rem;
+  }
+  .plan-card {
+    padding: 1.25rem 2rem;
+  }
+  .plan-image-wrapper {
+    height: 100px;
+  }
+  /* Slide 7 Calendário */
+  .calendario-subtitle {
+    margin-bottom: 8px;
+  }
+  /* Slide 8 Alimentação */
+  .refeicoes-grid {
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .refeicao-card {
+    width: 280px;
+  }
+}
+
+/* ==========================================================================
+   5. MOBILE OVERRIDES (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .slide-container {
+    padding: 5.5rem 1.25rem 7.5rem 1.25rem;
+    height: 100vh;
+    overflow-y: auto;
+    display: block; /* Permite scroll vertical livre */
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .slide-container .slide-title {
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    border-left-width: 3px;
+    padding-left: 0.875rem;
+  }
+  
+  /* Slide 0 Capa */
+  .title-layout {
+    margin-top: 10vh; /* Centra verticalmente um pouco no mobile */
+  }
+  .title-layout h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  .title-layout p {
+    font-size: 1rem;
+  }
+  
+  /* Slide 1 e 2 */
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .tiled-content {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .tile {
+    min-height: auto !important;
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 8px;
+  }
+  .tile h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .tile p {
+    font-size: 1rem;
+  }
+  
+  /* Slide 3 Sponsors */
+  .empresas-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .past-sponsors-carousel {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    overflow-x: visible;
+    gap: 10px;
+    padding-bottom: 15px;
+    justify-items: center;
+  }
+  .past-sponsor-card {
+    width: 100%;
+    max-width: 105px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+  .sponsor-logo-container {
+    height: 45px;
+  }
+  .sponsor-logo {
+    max-height: 30px;
+  }
+  .sponsor-logo-fallback {
+    font-size: 16px;
+  }
+  .sponsor-name {
+    bottom: 8px;
+    font-size: 8px;
+  }
+  
+  /* Slide 4 Organização & Comissão */
+  #slide-organizacao-comissao .content-area {
+    display: block; /* Remove flexibilidade vertical */
+    gap: 0;
+    padding: 0;
+  }
+  .comissao-subtitle {
+    margin-top: -1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    font-size: 11px !important;
+  }
+  .comissao-row-top {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .comissao-info-card, .comissao-card-mesa {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: auto !important;
+    padding: 1.5rem 1.25rem !important;
+  }
+  .comissao-info-card p {
+    font-size: 1rem;
+  }
+  .comissao-click-tip {
+    margin-top: 10px;
+  }
+  .comissao-card-mesa h3 {
+    font-size: 1.25rem;
+  }
+  .comissao-card-mesa p {
+    font-size: 0.95rem;
+  }
+  .comissao-card-inner {
+    gap: 1rem;
+  }
+  .comissao-card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+  .comissao-row-bottom {
+    grid-template-columns: 1fr; /* Lista de departamentos vertical */
+    gap: 1rem;
+  }
+  .comissao-dept-card {
+    min-height: auto !important;
+    padding: 1.5rem 1.25rem !important;
+  }
+  .dept-header i {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .dept-body h4 {
+    font-size: 1.1rem;
+  }
+  .dept-body p {
+    font-size: 0.95rem;
+  }
+  
+  /* Modais & Hierarquias */
+  .modal-container {
+    padding: 2rem 1.25rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .tree-header h2 {
+    font-size: 1.5rem;
+  }
+  .tree-row-two {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .tree-row-two::before {
+    display: none; /* Esconde linhas de ligação horizontais */
+  }
+  .tree-row-three {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  .coordenadores-group {
+    grid-template-columns: 1fr; /* Lista vertical */
+    gap: 8px;
+  }
+  .tree-node {
+    min-width: 100%;
+    padding: 8px 12px;
+  }
+  .dept-members-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colunas para membros */
+    gap: 8px;
+  }
+  .no-members {
+    grid-column: span 2;
+  }
+  
+  /* Slide 5 Infraestrutura (Mobile adicional) */
+  #slide5 .content-area {
+    display: block;
+  }
+  .infra-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Slide 6 Plano de Execução (Tabela para Cards) */
+  .table-layout table,
+  .table-layout thead,
+  .table-layout tbody,
+  .table-layout th,
+  .table-layout td,
+  .table-layout tr {
+    display: block;
+  }
+  .table-layout thead {
+    display: none; /* Esconde headers de tabela */
+  }
+  .table-layout tr {
+    margin-bottom: 1rem;
+    background: var(--surface-white-02);
+    border: 1px solid var(--surface-white-08);
+    border-radius: 4px;
+    padding: 1rem;
+  }
+  .table-layout td {
+    border: none;
+    padding: 0.35rem 0;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  .table-layout td:first-child {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--surface-white-05);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .table-layout td:nth-child(2)::before {
+    content: "Descrição: ";
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    display: block;
+  }
+  .table-layout td:nth-child(3)::before {
+    content: "Público: ";
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    display: inline-block;
+  }
+  
+  /* Slide 7 Calendário */
+  .calendario-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .calendario-excel {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 6px;
+  }
+  .tabela-horarios {
+    min-width: 900px; /* Garante que a tabela não se comprime e seja scrollável horizontalmente */
+    font-size: 10px;
+  }
+  
+  /* Slide 8 Alimentação */
+  .alimentacao-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .refeicoes-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .refeicao-card {
+    width: 100%;
+    max-width: 340px;
+  }
+  
+  /* Slide 9 Bilhetes */
+  .bilhetes-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .bilhetes-grid {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    gap: 1.5rem;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .bilhete-card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 320px;
+  }
+  .carousel-indicator {
+    display: none;
+  }
+  
+  /* Slide 10 Roadmap (Timeline Vertical) */
+  .timeline-layout {
+    flex-direction: column;
+    gap: 2.25rem;
+    align-items: flex-start;
+    padding-left: 2rem;
+    margin-top: 1.5rem;
+  }
+  .timeline-line {
+    top: 0;
+    bottom: 0;
+    left: 1rem;
+    width: 2px;
+    height: 100%;
+  }
+  .timeline-progress {
+    top: 0;
+    left: 1rem;
+    width: 2px !important;
+    height: var(--progress, 0%) !important;
+    transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .timeline-item {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .timeline-dot {
+    margin: 0;
+    position: absolute;
+    left: -1.45rem;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+  }
+  .timeline-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  .timeline-item p {
+    font-size: 0.9rem;
+  }
+  .timeline-item.destaque.active h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Slide 11 Contacto */
+  .slide-final h2 {
+    font-size: 2.25rem;
+  }
+  .contact-box {
+    padding: 1.25rem;
+  }
+  
+  /* Controlos do Slider */
+  .slide-controls {
+    gap: 1rem;
+    bottom: 15px;
+  }
+  .slide-title-bar {
+    bottom: 50px;
+  }
+  .slide-counter {
+    top: 15px;
+    right: 60px;
+    height: 34px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+  .fullscreen-btn {
+    top: 15px;
+    right: 15px;
+    height: 34px;
+    width: 34px;
+  }
+}
+

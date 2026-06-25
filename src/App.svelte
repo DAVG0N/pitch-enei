@@ -1025,7 +1025,7 @@
     <div class="content-area">
       <div class="timeline-layout">
         <div class="timeline-line"></div>
-        <div class="timeline-progress" style="width: {progressPercent}%"></div>
+        <div class="timeline-progress" style="--progress: {progressPercent}%; width: {progressPercent}%"></div>
         
         {#each roadmapSteps as step, i}
           <div class="timeline-item {step.destaque ? 'destaque' : ''} {i < currentRoadmapStep ? 'active' : ''}">
